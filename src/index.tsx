@@ -24,6 +24,6 @@ const RestartEnhanced = RestartEnhancedModule
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return RestartEnhanced.multiply(a, b);
+export function restart(): Promise<void> {
+  return RestartEnhanced.restart();
 }
