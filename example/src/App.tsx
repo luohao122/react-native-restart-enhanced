@@ -1,18 +1,20 @@
-import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, Text, Button, SafeAreaView } from 'react-native';
 import { restart } from 'react-native-restart-enhanced';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
-
-  useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const handleRestart = async () => {
+    try {
+      await restart();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text>Hello World</Text>
+      <Button title="Press Me" onPress={handleRestart} />
+    </SafeAreaView>
   );
 }
 
