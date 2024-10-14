@@ -16,6 +16,7 @@ runs:
       run: |
         corepack enable
         corepack prepare yarn@3.6.4 --activate
+        yarn set version 3.6.4
       shell: bash
 
     - name: Check Node.js and Yarn Versions
