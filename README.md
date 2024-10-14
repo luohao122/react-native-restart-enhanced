@@ -12,11 +12,11 @@ npm install react-native-restart-enhanced
 
 
 ```js
-import { multiply } from 'react-native-restart-enhanced';
+import { restart } from 'react-native-restart-enhanced';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await restart();
 ```
 
 
