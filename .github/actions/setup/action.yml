@@ -18,6 +18,12 @@ runs:
         corepack prepare yarn@3.6.1 --activate
       shell: bash
 
+    - name: Check Node.js and Yarn Versions
+      run: |
+        node -v
+        yarn -v
+      shell: bash
+
     - name: Cache dependencies
       id: yarn-cache
       uses: actions/cache@v3
