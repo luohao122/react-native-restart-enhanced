@@ -8,7 +8,7 @@ import com.facebook.react.bridge.Promise;
 
 public class LegacyRestartEnhancedModule extends ReactContextBaseJavaModule {
 
-    public LegacyRestartModule(ReactApplicationContext reactContext) {
+    public LegacyRestartEnhancedModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 

@@ -3,11 +3,8 @@ import { restart } from 'react-native-restart-enhanced';
 
 export default function App() {
   const handleRestart = async () => {
-    try {
-      await restart();
-    } catch (err) {
-      console.log(err);
-    }
+    // Adding a delay to ensure the native module is ready
+    await restart();
   };
 
   return (
