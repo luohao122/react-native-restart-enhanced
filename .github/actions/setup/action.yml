@@ -4,10 +4,19 @@ description: Setup Node.js and install dependencies
 runs:
   using: composite
   steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version-file: .nvmrc
+
+    - name: Setup Yarn
+      run: |
+        corepack enable
+        corepack prepare yarn@3.6.1 --activate
+      shell: bash
 
     - name: Cache dependencies
       id: yarn-cache
